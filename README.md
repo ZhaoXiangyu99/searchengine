@@ -1,8 +1,4 @@
-Environment:
-- go 1.18
-- Docker
-- kitex
-- protobuf
+启动方法
 
 1.设置基本依赖服务
 > sudo docker-compose up
