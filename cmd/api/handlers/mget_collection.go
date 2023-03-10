@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"searchengine3090ti/cmd/api/rpc"
-	"searchengine3090ti/kitex_gen/collectionModel"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/api/rpc"
+	"searchengine/kitex_gen/collectionModel"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/errno"
 
 	jwt "github.com/appleboy/gin-jwt/v2"
 	"github.com/gin-gonic/gin"

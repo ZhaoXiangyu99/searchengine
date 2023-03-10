@@ -2,17 +2,17 @@ package main
 
 import (
 	"context"
-	"searchengine3090ti/cmd/user/pack"
-	"searchengine3090ti/cmd/user/service"
-	"searchengine3090ti/kitex_gen/userModel"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/user/pack"
+	"searchengine/cmd/user/service"
+	"searchengine/kitex_gen/userModel"
+	"searchengine/pkg/errno"
 )
 
 // UserServiceImpl implements the last service interface defined in the IDL.
 type UserServiceImpl struct{}
 
 // CreateUser implements the UserServiceImpl interface.
-//注册
+// 注册
 func (s *UserServiceImpl) CreateUser(ctx context.Context, req *userModel.CreateUserRequest) (resp *userModel.CreateUserResponse, err error) {
 	resp = new(userModel.CreateUserResponse)
 
@@ -31,7 +31,7 @@ func (s *UserServiceImpl) CreateUser(ctx context.Context, req *userModel.CreateU
 }
 
 // MGetUser implements the UserServiceImpl interface.
-//批量获取用户信息
+// 批量获取用户信息
 func (s *UserServiceImpl) MGetUser(ctx context.Context, req *userModel.MGetUserRequest) (resp *userModel.MGetUserResponse, err error) {
 	resp = new(userModel.MGetUserResponse)
 
@@ -51,7 +51,7 @@ func (s *UserServiceImpl) MGetUser(ctx context.Context, req *userModel.MGetUserR
 }
 
 // CheckUser implements the UserServiceImpl interface.
-//校验用户
+// 校验用户
 func (s *UserServiceImpl) CheckUser(ctx context.Context, req *userModel.CheckUserRequest) (resp *userModel.CheckUserResponse, err error) {
 	resp = new(userModel.CheckUserResponse)
 

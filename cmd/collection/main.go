@@ -2,10 +2,10 @@ package main
 
 import (
 	"net"
-	"searchengine3090ti/cmd/collection/dal"
-	collectionModel "searchengine3090ti/kitex_gen/collectionModel/collectionservice"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/middleware"
+	"searchengine/cmd/collection/dal"
+	collectionModel "searchengine/kitex_gen/collectionModel/collectionservice"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/middleware"
 
 	"github.com/cloudwego/kitex/pkg/klog"
 	"github.com/cloudwego/kitex/pkg/limit"

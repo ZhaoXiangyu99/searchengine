@@ -1,7 +1,7 @@
 package dal
 
 import (
-	"searchengine3090ti/cmd/search/dal/db"
+	"searchengine/cmd/search/dal/db"
 )
 
 func Init() {

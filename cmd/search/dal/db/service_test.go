@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"searchengine3090ti/cmd/search/dal/db"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
+	"searchengine/cmd/search/dal/db"
+	searchapi "searchengine/kitex_gen/SearchApi"
 	"testing"
 )
 
@@ -23,7 +23,7 @@ func TestAddIndex(t *testing.T) {
 	db.AddIndex(context.Background(), &req, keywords)
 }
 
-//通过关键词查询id
+// 通过关键词查询id
 func TestQuery(t *testing.T) {
 	ids, find := db.Query(context.Background(), "shanghai")
 	fmt.Println(ids)
@@ -31,7 +31,7 @@ func TestQuery(t *testing.T) {
 	// assert.Equal(t, true, find)
 }
 
-//通过索引id数组查询索引内容(Id, Text, Url)数组
+// 通过索引id数组查询索引内容(Id, Text, Url)数组
 func TestQueryRecord(t *testing.T) {
 	ids, _ := db.Query(context.Background(), "extra")
 	records, _ := db.QueryRecord(context.Background(), ids)
@@ -39,7 +39,7 @@ func TestQueryRecord(t *testing.T) {
 	fmt.Println(records)
 }
 
-//通过id查询关键词
+// 通过id查询关键词
 func TestQueryKeyWords(t *testing.T) {
 	keywords, find := db.QueryKeyWords(context.Background(), 1)
 	fmt.Println(keywords)
@@ -47,7 +47,7 @@ func TestQueryKeyWords(t *testing.T) {
 	// assert.Equal(t, true, find)
 }
 
-//通过关键词查询图片id
+// 通过关键词查询图片id
 func TestQueryImagesRecord(t *testing.T) {
 	ids, _ := db.Query(context.Background(), "extra")
 	records, _ := db.QueryImagesRecord(context.Background(), ids)

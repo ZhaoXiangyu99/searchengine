@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	"searchengine3090ti/cmd/collection/pack"
-	"searchengine3090ti/cmd/collection/service"
-	"searchengine3090ti/kitex_gen/collectionModel"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/collection/pack"
+	"searchengine/cmd/collection/service"
+	"searchengine/kitex_gen/collectionModel"
+	"searchengine/pkg/errno"
 )
 
 // CollectionServiceImpl implements the last service interface defined in the IDL.

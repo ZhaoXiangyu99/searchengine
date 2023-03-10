@@ -3,14 +3,14 @@ package db
 import (
 	"context"
 	"errors"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
+	searchapi "searchengine/kitex_gen/SearchApi"
 	"strings"
 
 	"gorm.io/gorm"
 )
 
-//数据模型
-//Keyword与UserID之间是manytomany关系
+// 数据模型
+// Keyword与UserID之间是manytomany关系
 type Keyword struct {
 	gorm.Model
 	Word    string
@@ -74,7 +74,7 @@ func AddIndex(ctx context.Context, req *searchapi.AddRequest, keywords []string)
 	return nil
 }
 
-//查询与关键词相关的索引id数组
+// 查询与关键词相关的索引id数组
 func Query(ctx context.Context, keyword string) ([]int64, bool) {
 	var keywordEntry Keyword
 	result := DB.Model(&Keyword{}).First(&keywordEntry, "word = ?", keyword)
@@ -90,7 +90,7 @@ func Query(ctx context.Context, keyword string) ([]int64, bool) {
 	return ids, true
 }
 
-//通过索引id数组查询索引内容(Id, Text, Url)数组
+// 通过索引id数组查询索引内容(Id, Text, Url)数组
 func QueryRecord(ctx context.Context, ids []int64) ([]searchapi.AddRequest, error) {
 	ans := make([]searchapi.AddRequest, len(ids))
 	var err error
@@ -105,7 +105,7 @@ func QueryRecord(ctx context.Context, ids []int64) ([]searchapi.AddRequest, erro
 	return ans, err
 }
 
-//查询与id相关的关键词
+// 查询与id相关的关键词
 func QueryKeyWords(ctx context.Context, id int64) ([]string, bool) {
 	var UserIDEntry UserID
 	result := DB.Model(&UserID{}).First(&UserIDEntry, "uid = ?", id)
@@ -121,7 +121,7 @@ func QueryKeyWords(ctx context.Context, id int64) ([]string, bool) {
 	return words, true
 }
 
-//查询当前记录的数目
+// 查询当前记录的数目
 func QueryRecordsNumber(ctx context.Context) (ans int64, err error) {
 	var records []Record
 	result := DB.Model(&Record{}).Find(&records)
@@ -136,7 +136,7 @@ func QueryRecordsNumber(ctx context.Context) (ans int64, err error) {
 	return
 }
 
-//通过索引id数组查询索引内容为图片(Id, Text, Url)的数组
+// 通过索引id数组查询索引内容为图片(Id, Text, Url)的数组
 func QueryImagesRecord(ctx context.Context, ids []int64) ([]searchapi.AddRequest, error) {
 	ans := []searchapi.AddRequest{}
 	var err error

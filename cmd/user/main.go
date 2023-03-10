@@ -2,10 +2,10 @@ package main
 
 import (
 	"net"
-	"searchengine3090ti/cmd/user/dal"
-	userModel "searchengine3090ti/kitex_gen/userModel/userservice"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/middleware"
+	"searchengine/cmd/user/dal"
+	userModel "searchengine/kitex_gen/userModel/userservice"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/middleware"
 
 	"github.com/cloudwego/kitex/pkg/klog"
 	"github.com/cloudwego/kitex/pkg/limit"

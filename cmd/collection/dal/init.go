@@ -1,6 +1,6 @@
 package dal
 
-import "searchengine3090ti/cmd/collection/dal/db"
+import "searchengine/cmd/collection/dal/db"
 
 func Init() {
 	db.Init()

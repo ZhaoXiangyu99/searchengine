@@ -1,7 +1,7 @@
 package db
 
 import (
-	"searchengine3090ti/pkg/constants"
+	"searchengine/pkg/constants"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

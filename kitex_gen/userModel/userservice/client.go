@@ -6,7 +6,7 @@ import (
 	"context"
 	"github.com/cloudwego/kitex/client"
 	"github.com/cloudwego/kitex/client/callopt"
-	"searchengine3090ti/kitex_gen/userModel"
+	"searchengine/kitex_gen/userModel"
 )
 
 // Client is designed to provide IDL-compatible methods with call-option parameter for kitex framework.

@@ -6,7 +6,7 @@ import (
 	"context"
 	"github.com/cloudwego/kitex/client"
 	kitex "github.com/cloudwego/kitex/pkg/serviceinfo"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
+	searchapi "searchengine/kitex_gen/SearchApi"
 )
 
 func serviceInfo() *kitex.ServiceInfo {

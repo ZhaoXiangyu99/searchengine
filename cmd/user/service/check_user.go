@@ -5,9 +5,9 @@ import (
 	"crypto/md5"
 	"fmt"
 	"io"
-	"searchengine3090ti/cmd/user/dal/db"
-	"searchengine3090ti/kitex_gen/userModel"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/user/dal/db"
+	"searchengine/kitex_gen/userModel"
+	"searchengine/pkg/errno"
 )
 
 type CheckUserService struct {

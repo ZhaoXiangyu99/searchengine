@@ -3,7 +3,7 @@ package idgen_test
 import (
 	"fmt"
 	"os"
-	"searchengine3090ti/cmd/api/idgen"
+	"searchengine/cmd/api/idgen"
 	"testing"
 )
 

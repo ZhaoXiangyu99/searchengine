@@ -2,7 +2,7 @@ package db
 
 import (
 	"context"
-	"searchengine3090ti/pkg/constants"
+	"searchengine/pkg/constants"
 
 	"gorm.io/gorm"
 )

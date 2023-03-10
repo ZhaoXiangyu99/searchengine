@@ -1,4 +1,4 @@
-module searchengine3090ti
+module searchengine
 
 go 1.18
 

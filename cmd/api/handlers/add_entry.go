@@ -1,11 +1,11 @@
 package handlers
 
 import (
-	"searchengine3090ti/cmd/api/rpc"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
-	"searchengine3090ti/kitex_gen/collectionModel"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/api/rpc"
+	searchapi "searchengine/kitex_gen/SearchApi"
+	"searchengine/kitex_gen/collectionModel"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/errno"
 	"strconv"
 
 	jwt "github.com/appleboy/gin-jwt/v2"

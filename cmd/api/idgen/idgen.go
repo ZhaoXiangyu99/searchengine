@@ -2,13 +2,13 @@ package idgen
 
 import (
 	"fmt"
-	"searchengine3090ti/pkg/constants"
+	"searchengine/pkg/constants"
 	"sync"
 	"time"
 )
 
-//雪花算法生成id
-//本地生成全局唯一id,支持高并发
+// 雪花算法生成id
+// 本地生成全局唯一id,支持高并发
 type Snowflake struct {
 	sync.Mutex       // 锁
 	timestamp  int64 // 时间戳 ，毫秒
@@ -60,21 +60,3 @@ func GetID() int64 {
 	s.Unlock()
 	return r
 }
-
-// 自增算法产生ID
-// 问题：已删除过的ID无法复用，不支持并发, 已弃用
-// var ID int64
-
-// func Init() {
-// 	ret, err := rpc.SearchClient.QueryIDNumber(context.Background(), &searchapi.QueryIDNumberRequest{})
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	ID = ret.Number
-// 	fmt.Println("Current records number: ", ID)
-// }
-
-// func GetID() int64 {
-// 	ID++
-// 	return ID
-// }

@@ -2,15 +2,15 @@ package handlers
 
 import (
 	"context"
-	"searchengine3090ti/cmd/api/idgen"
-	"searchengine3090ti/cmd/api/rpc"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/api/idgen"
+	"searchengine/cmd/api/rpc"
+	searchapi "searchengine/kitex_gen/SearchApi"
+	"searchengine/pkg/errno"
 
 	"github.com/gin-gonic/gin"
 )
 
-//添加索引直接接口
+// 添加索引直接接口
 func Add(c *gin.Context) {
 	var addVar AddParam
 	if err := c.ShouldBind(addVar); err != nil {

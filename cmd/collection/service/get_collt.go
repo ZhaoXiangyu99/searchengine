@@ -2,10 +2,10 @@ package service
 
 import (
 	"context"
-	"searchengine3090ti/cmd/collection/dal/db"
-	"searchengine3090ti/cmd/collection/pack"
-	"searchengine3090ti/kitex_gen/collectionModel"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/collection/dal/db"
+	"searchengine/cmd/collection/pack"
+	"searchengine/kitex_gen/collectionModel"
+	"searchengine/pkg/errno"
 )
 
 type GetColltService struct {

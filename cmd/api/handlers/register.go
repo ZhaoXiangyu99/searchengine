@@ -2,14 +2,14 @@ package handlers
 
 import (
 	"context"
-	"searchengine3090ti/cmd/api/rpc"
-	"searchengine3090ti/kitex_gen/userModel"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/api/rpc"
+	"searchengine/kitex_gen/userModel"
+	"searchengine/pkg/errno"
 
 	"github.com/gin-gonic/gin"
 )
 
-//注册直接接口
+// 注册直接接口
 func Register(c *gin.Context) {
 	var registerVar UserParam
 	if err := c.ShouldBind(&registerVar); err != nil {

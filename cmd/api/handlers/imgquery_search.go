@@ -2,10 +2,10 @@ package handlers
 
 import (
 	"context"
-	"searchengine3090ti/cmd/api/rpc"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/cmd/api/rpc"
+	searchapi "searchengine/kitex_gen/SearchApi"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/errno"
 	"strconv"
 
 	"github.com/gin-gonic/gin"

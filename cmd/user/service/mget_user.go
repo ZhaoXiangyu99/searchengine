@@ -2,9 +2,9 @@ package service
 
 import (
 	"context"
-	"searchengine3090ti/cmd/user/dal/db"
-	"searchengine3090ti/cmd/user/pack"
-	"searchengine3090ti/kitex_gen/userModel"
+	"searchengine/cmd/user/dal/db"
+	"searchengine/cmd/user/pack"
+	"searchengine/kitex_gen/userModel"
 )
 
 type MGetUserService struct {

@@ -1,13 +1,3 @@
-# SearchEngine3090ti
-
-
-## Introduction
-https://kpcbf4ul2l.feishu.cn/docx/doxcnh8E8ZdonIeLizsyJeQFmPA
-
-## API Document
-https://www.apifox.cn/apidoc/shared-f5f40433-908c-44e8-9661-e5ed84988a59
-
-## Quick Start
 Environment:
 - go 1.18
 - Docker

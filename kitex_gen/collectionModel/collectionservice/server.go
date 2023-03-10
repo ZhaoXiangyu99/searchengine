@@ -3,7 +3,7 @@ package collectionservice
 
 import (
 	"github.com/cloudwego/kitex/server"
-	"searchengine3090ti/kitex_gen/collectionModel"
+	"searchengine/kitex_gen/collectionModel"
 )
 
 // NewServer creates a server.Server with the given handler and options.

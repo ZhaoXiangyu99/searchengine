@@ -2,11 +2,11 @@ package rpc
 
 import (
 	"context"
-	"searchengine3090ti/kitex_gen/userModel"
-	"searchengine3090ti/kitex_gen/userModel/userservice"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/errno"
-	"searchengine3090ti/pkg/middleware"
+	"searchengine/kitex_gen/userModel"
+	"searchengine/kitex_gen/userModel/userservice"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/errno"
+	"searchengine/pkg/middleware"
 	"time"
 
 	"github.com/cloudwego/kitex/client"

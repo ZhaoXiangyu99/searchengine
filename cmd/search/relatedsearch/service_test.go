@@ -3,7 +3,7 @@ package relatedsearch_test
 import (
 	"fmt"
 	"os"
-	"searchengine3090ti/cmd/search/relatedsearch"
+	"searchengine/cmd/search/relatedsearch"
 	"testing"
 )
 

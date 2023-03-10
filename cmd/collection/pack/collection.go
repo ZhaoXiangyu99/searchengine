@@ -1,8 +1,8 @@
 package pack
 
 import (
-	"searchengine3090ti/cmd/collection/dal/db"
-	"searchengine3090ti/kitex_gen/collectionModel"
+	"searchengine/cmd/collection/dal/db"
+	"searchengine/kitex_gen/collectionModel"
 )
 
 func Collection(c *db.Collection) *collectionModel.Collection {

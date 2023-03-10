@@ -3,7 +3,7 @@ package search
 
 import (
 	"github.com/cloudwego/kitex/server"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
+	searchapi "searchengine/kitex_gen/SearchApi"
 )
 
 // NewServer creates a server.Server with the given handler and options.

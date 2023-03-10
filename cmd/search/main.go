@@ -2,12 +2,12 @@ package main
 
 import (
 	"net"
-	"searchengine3090ti/cmd/search/dal/db"
-	"searchengine3090ti/cmd/search/relatedsearch"
-	"searchengine3090ti/cmd/search/tokenizer"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi/search"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/middleware"
+	"searchengine/cmd/search/dal/db"
+	"searchengine/cmd/search/relatedsearch"
+	"searchengine/cmd/search/tokenizer"
+	searchapi "searchengine/kitex_gen/SearchApi/search"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/middleware"
 
 	"github.com/cloudwego/kitex/pkg/klog"
 	"github.com/cloudwego/kitex/pkg/limit"

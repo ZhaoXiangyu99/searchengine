@@ -1,8 +1,8 @@
 package pack
 
 import (
-	"searchengine3090ti/cmd/user/dal/db"
-	"searchengine3090ti/kitex_gen/userModel"
+	"searchengine/cmd/user/dal/db"
+	"searchengine/kitex_gen/userModel"
 )
 
 func User(u *db.User) *userModel.User {

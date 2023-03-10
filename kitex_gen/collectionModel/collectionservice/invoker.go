@@ -4,7 +4,7 @@ package collectionservice
 
 import (
 	"github.com/cloudwego/kitex/server"
-	"searchengine3090ti/kitex_gen/collectionModel"
+	"searchengine/kitex_gen/collectionModel"
 )
 
 // NewInvoker creates a server.Invoker with the given handler and options.

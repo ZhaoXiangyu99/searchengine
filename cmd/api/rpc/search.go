@@ -3,10 +3,10 @@ package rpc
 import (
 	"context"
 	"errors"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
-	"searchengine3090ti/kitex_gen/SearchApi/search"
-	"searchengine3090ti/pkg/constants"
-	"searchengine3090ti/pkg/middleware"
+	searchapi "searchengine/kitex_gen/SearchApi"
+	"searchengine/kitex_gen/SearchApi/search"
+	"searchengine/pkg/constants"
+	"searchengine/pkg/middleware"
 	"time"
 
 	"github.com/cloudwego/kitex/client"

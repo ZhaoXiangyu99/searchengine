@@ -9,7 +9,7 @@ import (
 	kitex "github.com/cloudwego/kitex/pkg/serviceinfo"
 	"github.com/cloudwego/kitex/pkg/streaming"
 	"google.golang.org/protobuf/proto"
-	"searchengine3090ti/kitex_gen/collectionModel"
+	"searchengine/kitex_gen/collectionModel"
 )
 
 func serviceInfo() *kitex.ServiceInfo {

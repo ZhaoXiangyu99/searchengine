@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 	"net/http"
-	"searchengine3090ti/cmd/api/handlers"
-	"searchengine3090ti/cmd/api/idgen"
-	"searchengine3090ti/cmd/api/rpc"
-	"searchengine3090ti/kitex_gen/userModel"
-	"searchengine3090ti/pkg/constants"
+	"searchengine/cmd/api/handlers"
+	"searchengine/cmd/api/idgen"
+	"searchengine/cmd/api/rpc"
+	"searchengine/kitex_gen/userModel"
+	"searchengine/pkg/constants"
 	"time"
 
 	jwt "github.com/appleboy/gin-jwt/v2"

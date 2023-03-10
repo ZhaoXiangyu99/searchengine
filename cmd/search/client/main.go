@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"log"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
-	"searchengine3090ti/kitex_gen/SearchApi/search"
+	searchapi "searchengine/kitex_gen/SearchApi"
+	"searchengine/kitex_gen/SearchApi/search"
 
 	"github.com/cloudwego/kitex/client"
 )

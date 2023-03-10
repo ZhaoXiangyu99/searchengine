@@ -4,7 +4,7 @@ package userservice
 
 import (
 	"github.com/cloudwego/kitex/server"
-	"searchengine3090ti/kitex_gen/userModel"
+	"searchengine/kitex_gen/userModel"
 )
 
 // NewInvoker creates a server.Invoker with the given handler and options.

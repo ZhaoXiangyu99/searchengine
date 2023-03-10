@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"math"
 	"os/exec"
-	"searchengine3090ti/cmd/search/dal/db"
-	"searchengine3090ti/cmd/search/relatedsearch"
-	"searchengine3090ti/cmd/search/tokenizer"
-	searchapi "searchengine3090ti/kitex_gen/SearchApi"
+	"searchengine/cmd/search/dal/db"
+	"searchengine/cmd/search/relatedsearch"
+	"searchengine/cmd/search/tokenizer"
+	searchapi "searchengine/kitex_gen/SearchApi"
 	"sync"
 	"time"
 
@@ -364,7 +364,7 @@ func (s *SearchImpl) RelatedQuery(ctx context.Context, req *searchapi.RelatedQue
 	return
 }
 
-//FindID implements the SearchImpl interface.
+// FindID implements the SearchImpl interface.
 func (s *SearchImpl) FindID(ctx context.Context, req *searchapi.FindIDRequest) (resp *searchapi.FindIDResponse, err error) {
 	// 调用数据库根据ID查询记录接口
 	ret, err := db.QueryRecord(context.Background(), req.Ids)
@@ -382,8 +382,8 @@ func (s *SearchImpl) QueryIDNumber(ctx context.Context, req *searchapi.QueryIDNu
 	return
 }
 
-//计算关键词的权重（IDF逆文档频率算法）
-//关键词在记录中出现的次数越多，关键词的权重越小
+// 计算关键词的权重（IDF逆文档频率算法）
+// 关键词在记录中出现的次数越多，关键词的权重越小
 func getWeight(keyword string) (float64, error) {
 	ids, find := db.Query(context.Background(), keyword)
 	number, err := db.QueryRecordsNumber(context.Background())

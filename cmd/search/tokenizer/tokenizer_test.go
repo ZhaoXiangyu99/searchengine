@@ -3,7 +3,7 @@ package tokenizer_test
 import (
 	"fmt"
 	"os"
-	"searchengine3090ti/cmd/search/tokenizer"
+	"searchengine/cmd/search/tokenizer"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -21,9 +21,9 @@ func TestMain(m *testing.M) {
 
 }
 
-//func TestNewTokenizer(t *testing.T) {
+// func TestNewTokenizer(t *testing.T) {
 //
-//}
+// }
 func TestCut(t *testing.T) {
 
 	output := tk.Cut("天气真好")

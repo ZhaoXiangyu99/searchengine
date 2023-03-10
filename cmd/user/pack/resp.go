@@ -2,8 +2,8 @@ package pack
 
 import (
 	"errors"
-	"searchengine3090ti/kitex_gen/userModel"
-	"searchengine3090ti/pkg/errno"
+	"searchengine/kitex_gen/userModel"
+	"searchengine/pkg/errno"
 	"time"
 )
 

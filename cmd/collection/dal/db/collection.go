@@ -5,7 +5,7 @@ import (
 	"database/sql/driver"
 	"encoding/json"
 	"errors"
-	"searchengine3090ti/pkg/constants"
+	"searchengine/pkg/constants"
 
 	"gorm.io/gorm"
 )
@@ -33,12 +33,12 @@ func (c *Collection) TableName() string {
 	return constants.CollectionTableName
 }
 
-//创建收藏夹
+// 创建收藏夹
 func CreateCollection(ctx context.Context, collections []*Collection) error {
 	return DB.WithContext(ctx).Create(collections).Error
 }
 
-//获取用户收藏夹
+// 获取用户收藏夹
 func MGetColletction(ctx context.Context, UserID int64) ([]*Collection, error) {
 	res := make([]*Collection, 0)
 	if err := DB.WithContext(ctx).Where("user_id = ?", UserID).Find(&res).Error; err != nil {
@@ -47,7 +47,7 @@ func MGetColletction(ctx context.Context, UserID int64) ([]*Collection, error) {
 	return res, nil
 }
 
-//获取指定收藏夹
+// 获取指定收藏夹
 func GetColletction(ctx context.Context, UserID, ColltID int64) ([]*Collection, error) {
 	res := make([]*Collection, 0)
 	if err := DB.WithContext(ctx).Where("user_id = ? AND id = ?", UserID, uint(ColltID)).Find(&res).First(&res).Error; err != nil {
@@ -56,7 +56,7 @@ func GetColletction(ctx context.Context, UserID, ColltID int64) ([]*Collection, 
 	return res, nil
 }
 
-//删除收藏夹
+// 删除收藏夹
 func DeleteCollection(ctx context.Context, UserID, ColltID int64) error {
 	res := make([]*Collection, 0)
 	if err := DB.WithContext(ctx).Where("user_id = ? AND id = ?", UserID, uint(ColltID)).Delete(&res).Error; err != nil {
@@ -65,7 +65,7 @@ func DeleteCollection(ctx context.Context, UserID, ColltID int64) error {
 	return nil
 }
 
-//添加收藏夹记录
+// 添加收藏夹记录
 func AddEntry(ctx context.Context, UserID, ColltID int64, newEntry int64) error {
 	res := make([]*Collection, 0)
 	if err := DB.WithContext(ctx).Where("user_id = ? AND id = ?", UserID, uint(ColltID)).Find(&res).First(&res).Error; err != nil {
@@ -78,7 +78,7 @@ func AddEntry(ctx context.Context, UserID, ColltID int64, newEntry int64) error 
 	return nil
 }
 
-//删除收藏夹中记录
+// 删除收藏夹中记录
 func DeleteEntry(ctx context.Context, UserID, ColltID int64, targetEntry int64) error {
 	res := make([]*Collection, 0)
 	if err := DB.WithContext(ctx).Where("user_id = ? AND id = ?", UserID, uint(ColltID)).Find(&res).First(&res).Error; err != nil {
@@ -99,7 +99,7 @@ func DeleteEntry(ctx context.Context, UserID, ColltID int64, targetEntry int64) 
 	return errors.New("no such entry")
 }
 
-//设置收藏夹名
+// 设置收藏夹名
 func SetName(ctx context.Context, UserID, ColltID int64, newName string) error {
 	if err := DB.Model(&Collection{}).WithContext(ctx).Where("user_id = ? AND id = ?", UserID, uint(ColltID)).Update("name", newName).Error; err != nil {
 		return err

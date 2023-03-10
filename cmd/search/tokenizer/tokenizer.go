@@ -3,7 +3,7 @@ package tokenizer
 import (
 	"embed"
 
-	"searchengine3090ti/cmd/search/tokenizer/utils"
+	"searchengine/cmd/search/tokenizer/utils"
 
 	"strings"
 
